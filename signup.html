@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Signup Here</title>
+        <script type="text/javascript">
+            function validate()
+            {
+                var username = document.getElementById("username");
+                var password = document.getElementById("passk1");
+                var Confirm = document.getElementById("passk2");
+                if(username.value.trim() =="")
+                {
+                    alert("Enter valid username or password");
+                    return false;
+                }
+                else if(passk2.value.trim() =="")
+                {
+                    alert("Enter valid username or password");
+                    return false;
+                }
+                else if(passk1.value.trim()=="")
+                {
+                    alert("Enter valid username or password");
+                    return false;
+                }
+                else if(passk1.value.trim().length < 5 || passk2.value.trim().length < 5)
+                {
+                    alert("Not a secure password");
+                    return false;
+                }
+                else if(username.value.trim().length < 8)  
+                {
+                    alert("creditional is to short");
+                    return false;
+                }
+                else
+                {
+                    true;
+                }
+            }
+            function checkpswd()
+            {
+                let password = document.getElementById("passk1");
+                let Confirm = document.getElementById("passk2");
+                console.log(passk1,passk2);
+                if(passk2.value.trim() ==""||passk1.value.trim() =="")
+                {
+                    alert("Enter valid username or password");
+                    return false;
+                }
+                else
+                {
+                    if(passk1.value != passk2.value)
+                    {
+                    
+                        alert("password Not Matched!");
+                        return false;
+                    }
+                    else
+                    {
+                        alert("Signed up successfully!!")
+                        true;
+                    }
+                }
+                
+            }
+            
+
+                
+            
+            
+        </script>
+        <style type="text/css">
+            
+        body{
+            background-image: url(12.jpeg);
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        label{
+            width: 200px;
+            display: inline-block;   
+        }
+        .divs1{
+            width: 400px;
+            height: 250px;
+            background-color: white;
+            margin-top: 180px;
+            margin-left:450px;
+            padding-left: 30px;
+            padding-top: 30px;
+            padding-right: 20px;
+            font-family: Arial;
+            border-radius: 20px;
+        }
+        .hs1
+        {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .signup
+        {
+            font-family: Poppins;
+            background-color:grey;
+            color: white ;
+            border-radius: 20px;
+            font-size: 18px;
+            display: inline-block;
+            border: none;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-right: 15px;
+        }
+
+        .signup:hover
+        {
+            background-color: white;
+        color: grey;
+        cursor: pointer;
+        font-weight: bold;
+        border: solid;
+        border-radius: 20px;
+        }
+        #message
+        {
+            display:inline-block;
+            color: black;
+            
+        }
+
+        </style>
+    </head>
+    <body>
+        <div class="divs1">
+            
+            <form onsubmit=" return validate()" action="index.html">
+                
+                    <center><h class="hs1"> Signup</h><br></center>
+                    <br>
+                    <label>Username:</label>
+                    <input id="username" type="text" placeholder="Enter username"><br>
+                    <br>
+                    <label>Passkey:</label>
+                    <input id="passk1" type="password" placeholder="Enter passkey"><br>
+                    <br>
+                    <label>Confirm Passkey:</label>
+                    <input id="passk2" type="password" placeholder="Re-enter passkey"><br>
+                    <br>
+                    <center><button class="signup" onclick="checkpswd()" type="submit">Signup</button></center>
+                
+                    <p id="message"></p>
+                
+                
+                    
+                
+                
+            </form>
+        </div>
+        
+    </body>
+</html>
